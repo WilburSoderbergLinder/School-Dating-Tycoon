@@ -24,6 +24,8 @@ public class TeacherPairing : MonoBehaviour
                 if (teacher.traits[i] == pairedTeacher.traits[i]) thingsInCommon++;
             }
 
+            pairedTeacher = null;
+
             if(thingsInCommon <= badScore)
             {
                 print("Dålig matchning");
