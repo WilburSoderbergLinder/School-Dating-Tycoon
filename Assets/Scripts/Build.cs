@@ -1,12 +1,13 @@
 ﻿using NUnit.Framework;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class Build : MonoBehaviour
 {
     public GameObject BuildMenu;
-    public GameObject ConstructionArea;
+    GameObject ConstructionArea;
     public GameObject TestObject;
     void Start()
     {
@@ -24,15 +25,16 @@ public class Build : MonoBehaviour
             {
                 Debug.Log(hit.transform.name);
                 BuildMenu.SetActive(true);
+                ConstructionArea = hit.transform.gameObject;
             }
 
         }
     }
 
-    public void build ()
+    public void build (GameObject builditem)
     {
+        Instantiate(builditem,ConstructionArea.transform.position,Quaternion.identity);
         Destroy(ConstructionArea);
         BuildMenu.SetActive(false);
-        Instantiate(TestObject);
     }
 }
