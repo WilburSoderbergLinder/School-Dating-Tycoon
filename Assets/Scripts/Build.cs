@@ -7,11 +7,14 @@ using UnityEngine;
 public class Build : MonoBehaviour
 {
     public GameObject BuildMenu;
+    public GameObject ClassroomMenu; 
     GameObject ConstructionArea;
+    GameObject BuildArea;
     public GameObject TestObject;
     void Start()
     {
         BuildMenu.SetActive(false);
+        ClassroomMenu.SetActive(false);
     }
 
     void Update()
@@ -26,6 +29,13 @@ public class Build : MonoBehaviour
                 Debug.Log(hit.transform.name);
                 BuildMenu.SetActive(true);
                 ConstructionArea = hit.transform.gameObject;
+            } 
+            
+            else if (hit && hit.transform.tag == "BuildArea")
+            {
+                Debug.Log(hit.transform.name);
+                ClassroomMenu.SetActive(true);
+                BuildArea = hit.transform.gameObject;
             }
 
         }
@@ -36,5 +46,12 @@ public class Build : MonoBehaviour
         Instantiate(builditem,ConstructionArea.transform.position,Quaternion.identity);
         Destroy(ConstructionArea);
         BuildMenu.SetActive(false);
+    }
+
+    public void build2 (GameObject builditem)
+    {
+        Instantiate(builditem, ConstructionArea.transform.position, Quaternion.identity);
+        Destroy(BuildArea);
+        ClassroomMenu.SetActive(false);
     }
 }
