@@ -1135,6 +1135,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1757700456}
     m_Modifications:
+    - target: {fileID: 1412695622, guid: d710fa54b21b142479554b6f93327efb, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 573535659041140590, guid: d710fa54b21b142479554b6f93327efb,
         type: 3}
       propertyPath: m_Name
@@ -1153,7 +1157,7 @@ PrefabInstance:
     - target: {fileID: 8876604980750590829, guid: d710fa54b21b142479554b6f93327efb,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.073645
+      value: -0.099999905
       objectReference: {fileID: 0}
     - target: {fileID: 8876604980750590829, guid: d710fa54b21b142479554b6f93327efb,
         type: 3}
@@ -1688,7 +1692,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 415}
+  m_AnchoredPosition: {x: 0, y: -3}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &973378008
@@ -1989,6 +1993,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1757700456}
     m_Modifications:
+    - target: {fileID: 1412695622, guid: d710fa54b21b142479554b6f93327efb, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 573535659041140590, guid: d710fa54b21b142479554b6f93327efb,
         type: 3}
       propertyPath: m_Name
@@ -2007,7 +2015,7 @@ PrefabInstance:
     - target: {fileID: 8876604980750590829, guid: d710fa54b21b142479554b6f93327efb,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.073645
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 8876604980750590829, guid: d710fa54b21b142479554b6f93327efb,
         type: 3}
@@ -2218,10 +2226,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1821763774}
-        m_MethodName: build
+        m_MethodName: build2
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8366325886487748430, guid: 608e4c16ce7fe834cba39a37ae0c7ef8,
+          m_ObjectArgument: {fileID: 4668256496080465834, guid: 0d087855d3152ea479f73e9e17f63e23,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -2273,6 +2281,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1757700456}
     m_Modifications:
+    - target: {fileID: 1412695622, guid: d710fa54b21b142479554b6f93327efb, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 573535659041140590, guid: d710fa54b21b142479554b6f93327efb,
         type: 3}
       propertyPath: m_Name
@@ -2291,7 +2303,7 @@ PrefabInstance:
     - target: {fileID: 8876604980750590829, guid: d710fa54b21b142479554b6f93327efb,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.073645
+      value: -0.099999905
       objectReference: {fileID: 0}
     - target: {fileID: 8876604980750590829, guid: d710fa54b21b142479554b6f93327efb,
         type: 3}
@@ -2965,7 +2977,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Soffa
+  m_Text: Klassrum
 --- !u!222 &1550146104
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3207,7 +3219,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1651276631}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -49.6, y: -3.2, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3409,7 +3421,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1757700455}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -39.74835, y: -7.8441377, z: -1.2466681}
+  m_LocalPosition: {x: -39.74835, y: -7.8441377, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2026450942}
@@ -3472,7 +3484,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BuildMenu: {fileID: 692318727}
-  ClassroomMenu: {fileID: 0}
+  ClassroomMenu: {fileID: 973378006}
   TestObject: {fileID: 8366325886487748430, guid: 608e4c16ce7fe834cba39a37ae0c7ef8,
     type: 3}
 --- !u!1 &1994727524
@@ -3801,6 +3813,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1757700456}
     m_Modifications:
+    - target: {fileID: 1412695622, guid: d710fa54b21b142479554b6f93327efb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1412695622, guid: d710fa54b21b142479554b6f93327efb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.32
+      objectReference: {fileID: 0}
     - target: {fileID: 573535659041140590, guid: d710fa54b21b142479554b6f93327efb,
         type: 3}
       propertyPath: m_Name
@@ -3819,7 +3839,7 @@ PrefabInstance:
     - target: {fileID: 8876604980750590829, guid: d710fa54b21b142479554b6f93327efb,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.073645
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8876604980750590829, guid: d710fa54b21b142479554b6f93327efb,
         type: 3}

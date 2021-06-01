@@ -50,7 +50,7 @@ public class Build : MonoBehaviour
 
     public void build2 (GameObject builditem)
     {
-        Instantiate(builditem, ConstructionArea.transform.position, Quaternion.identity);
+        Instantiate(builditem, BuildArea.transform.GetChild(0).position, Quaternion.Euler(-90,0,0));
         Destroy(BuildArea);
         ClassroomMenu.SetActive(false);
     }
