@@ -349,7 +349,7 @@ PrefabInstance:
     - target: {fileID: 2359331333258909939, guid: 1d5d545a4ecd4b144b90be2ce9b07d42,
         type: 3}
       propertyPath: lastNames.Array.data[4]
-      value: Faridasson
+      value: Fridasson
       objectReference: {fileID: 0}
     - target: {fileID: 2359331333258909939, guid: 1d5d545a4ecd4b144b90be2ce9b07d42,
         type: 3}
@@ -399,7 +399,7 @@ PrefabInstance:
     - target: {fileID: 2359331333258909939, guid: 1d5d545a4ecd4b144b90be2ce9b07d42,
         type: 3}
       propertyPath: firstNames.Array.data[4]
-      value: Farida
+      value: Frida
       objectReference: {fileID: 0}
     - target: {fileID: 2359331333258909939, guid: 1d5d545a4ecd4b144b90be2ce9b07d42,
         type: 3}
