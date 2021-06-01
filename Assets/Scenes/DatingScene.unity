@@ -236,6 +236,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   traits: 000000000000000000000000000000000000000000000000
+  firstNames: []
+  lastNames: []
+  fullName: 
 --- !u!61 &468307422
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -448,6 +451,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   traits: 000000000000000000000000000000000000000000000000
+  firstNames: []
+  lastNames: []
+  fullName: 
 --- !u!1 &1321322821
 GameObject:
   m_ObjectHideFlags: 0
