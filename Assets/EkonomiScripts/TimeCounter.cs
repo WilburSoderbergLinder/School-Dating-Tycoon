@@ -5,6 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(TimeSystem))]
 public class TimeCounter : MonoBehaviour
 {
+    AudioSource pengar_SFx;
+    
     Loan[] loans = new Loan[5];
 
     public float minutes = 0;
@@ -85,6 +87,7 @@ public class TimeCounter : MonoBehaviour
                 loans[i].mortgageRate = mortgageRate;
                 loans[i].SetLoan();
                 print("nytt Lån");
+                pengar_SFx.Play();
                 return;
             }
         }
