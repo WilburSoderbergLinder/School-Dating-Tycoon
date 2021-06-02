@@ -4,7 +4,14 @@ using UnityEngine;
 
 public class teacher : MonoBehaviour
 {
-    // finns för tillfället inte särskillt mycket att tilläga på lärar skriptet, behöver tid system och pathfinding för att kunna implementera dem flesta funktionerna.
-
-    // variabler för stat ändringar kommer att finnas i ett annat skript. 
+    public Vector2 destination;
+    public float minutes;
+    private void Update()
+    {
+        minutes += Time.deltaTime*TimeSystem.Instance.timeScale; // behövde återskapa en del av tidsystemet för att kunna ha tillgång till det utan att skapa en referens - Gustav
+        if (minutes >= 60) {
+            minutes = 0;
+            destination = new Vector2(Random.Range(-50, 50), Random.Range(-50, 50)); //skapar en slumpmässig destination -  Gustav
+    }
+    }
 }
