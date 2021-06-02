@@ -12,7 +12,7 @@ GameObject:
   m_Layer: 0
   m_Name: Bord
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -46,12 +46,12 @@ PrefabInstance:
     - target: {fileID: 7595376186754625106, guid: 83aae98f19433bf44bb2613869ec2b6c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7595376186754625106, guid: 83aae98f19433bf44bb2613869ec2b6c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.77
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7595376186754625106, guid: 83aae98f19433bf44bb2613869ec2b6c,
         type: 3}
