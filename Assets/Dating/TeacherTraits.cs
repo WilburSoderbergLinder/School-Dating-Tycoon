@@ -11,9 +11,17 @@ public class TeacherTraits : MonoBehaviour
     [SerializeField] string[] lastNames = new string[0];
     
     public string fullName = "";
+    public Vector3 spawnPos;
     Text nameText;
+
+    TeacherSpawner spawner;
+
     void Start()
     {
+        spawner = FindObjectOfType<TeacherSpawner>();
+
+        spawnPos = transform.position;
+
         nameText = GetComponentInChildren<Text>();
 
         for (int i = 0; i < traits.Length -1; i++)
@@ -31,5 +39,14 @@ public class TeacherTraits : MonoBehaviour
     private void OnMouseDown()
     {
         FindObjectOfType<TeacherPairing>().Pair(this);
+    }
+
+    public void DestroyTeacher()
+    {
+        spawner.spawnPositions.Add(spawnPos);
+
+        Destroy(gameObject);
+
+        spawner.SpawnTeacher();
     }
 }

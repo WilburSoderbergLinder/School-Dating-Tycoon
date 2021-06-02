@@ -5,24 +5,23 @@ using UnityEngine;
 public class TeacherSpawner : MonoBehaviour
 {
 
-    [SerializeField] List<Vector3> spawnPositions = new List<Vector3>();
+    public List<Vector3> spawnPositions = new List<Vector3>();
 
     [SerializeField] GameObject teacherPrefab = null;
 
 
-    // Start is called before the first frame update
+    
     void Start()
     {
-        
+        int count = spawnPositions.Count;
+
+        for (int i = 0; i < count; i++)
+        {
+            SpawnTeacher();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    void SpawnTeacher()
+    public void SpawnTeacher()
     {
 
         int random = Random.Range(0, spawnPositions.Count - 1);

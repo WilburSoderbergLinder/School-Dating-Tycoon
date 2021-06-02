@@ -17,12 +17,17 @@ public class TeacherPairing : MonoBehaviour
         }
         else
         {
+            if (pairedTeacher == teacher) return;
+
             int thingsInCommon = 0;
 
             for (int i = 0; i < teacher.traits.Length; i++)
             {
                 if (teacher.traits[i] == pairedTeacher.traits[i]) thingsInCommon++;
             }
+
+            teacher.DestroyTeacher();
+            pairedTeacher.DestroyTeacher();
 
             pairedTeacher = null;
 
@@ -38,6 +43,11 @@ public class TeacherPairing : MonoBehaviour
             {
                 print("Mycket bra matchning");
             }
+
+            
         }
    }
+
+    
+    
 }
