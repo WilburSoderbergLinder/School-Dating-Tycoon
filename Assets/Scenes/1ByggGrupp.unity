@@ -3209,8 +3209,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1651276634}
   - component: {fileID: 1651276633}
+  - component: {fileID: 1651276639}
+  - component: {fileID: 1651276638}
+  - component: {fileID: 1651276637}
   - component: {fileID: 1651276635}
   - component: {fileID: 1651276632}
+  - component: {fileID: 1651276636}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3297,6 +3301,69 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.5
   smoothSpeed: 0.125
+--- !u!114 &1651276636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651276631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6454ada6c87971843a7d1f0132d38d66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paused: 0
+  savedTime: 0
+  timeScale: 1
+--- !u!114 &1651276637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651276631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12d04d5c54427654f856ca5f57a628f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  money: 0
+  students: 0
+  income: 100
+--- !u!114 &1651276638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651276631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8898e004a3625846abf30f7c56488c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minutes: 0
+  hours: 0
+  days: 0
+  weeks: 0
+  months: 0
+  years: 0
+--- !u!114 &1651276639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651276631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6454ada6c87971843a7d1f0132d38d66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paused: 0
+  savedTime: 0
+  timeScale: 1
 --- !u!1 &1700969502
 GameObject:
   m_ObjectHideFlags: 0
