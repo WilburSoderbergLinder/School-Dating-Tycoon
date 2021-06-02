@@ -16,8 +16,12 @@ public class TeacherTraits : MonoBehaviour
 
     TeacherSpawner spawner;
 
+    public PairingSymbol symbol;
+
     void Start()
     {
+        symbol = GetComponentInChildren<PairingSymbol>();
+
         spawner = FindObjectOfType<TeacherSpawner>();
 
         spawnPos = transform.position;
@@ -42,6 +46,11 @@ public class TeacherTraits : MonoBehaviour
     }
 
     public void DestroyTeacher()
+    {
+        Invoke("DelayedDestruction",3);
+    }
+
+    void DelayedDestruction()
     {
         spawner.spawnPositions.Add(spawnPos);
 
