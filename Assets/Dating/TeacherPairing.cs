@@ -35,6 +35,8 @@ public class TeacherPairing : MonoBehaviour
                 teacher.symbol.rend.sprite = teacher.symbol.badSymbol;
                 pairedTeacher.symbol.rend.sprite = teacher.symbol.badSymbol;
 
+                TimeCounter.Instance.NewBuff(-0.1f);
+
             }
             else if(thingsInCommon <= normalScore)
             {
@@ -42,6 +44,8 @@ public class TeacherPairing : MonoBehaviour
 
                 teacher.symbol.rend.sprite = teacher.symbol.normalSymbol;
                 pairedTeacher.symbol.rend.sprite = teacher.symbol.normalSymbol;
+
+                TimeCounter.Instance.NewBuff(0.1f);
             }
             else
             {
@@ -49,6 +53,8 @@ public class TeacherPairing : MonoBehaviour
 
                 teacher.symbol.rend.sprite = teacher.symbol.goodSymbol;
                 pairedTeacher.symbol.rend.sprite = teacher.symbol.goodSymbol;
+
+                TimeCounter.Instance.NewBuff(0.4f);
             }
 
             teacher.DestroyTeacher();
