@@ -1,10 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 //Kod av Daniel
 [RequireComponent(typeof(TimeSystem))]
 public class TimeCounter : MonoBehaviour
 {
+    public static TimeCounter Instance { get; private set; }
+    AudioSource pengar_SFx;
+    
     Loan[] loans = new Loan[5];
     List<Buffs> buffs = new List<Buffs>();
 
@@ -15,6 +19,19 @@ public class TimeCounter : MonoBehaviour
     public int months = 0;
     public int years = 0;
     public float totalBuff = 1;
+    private void Awake() //Gör scriptet till en Singleton
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            Instance = this;
+        }
+
+        DontDestroyOnLoad(this);
+    }
 
     // Update is called once per frame
     void Update()
@@ -83,6 +100,7 @@ public class TimeCounter : MonoBehaviour
                 loans[i].mortgageRate = mortgageRate;
                 loans[i].SetLoan();
                 print("nytt Lån");
+                pengar_SFx.Play();
                 return;
             }
         }
