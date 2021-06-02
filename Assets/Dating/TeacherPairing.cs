@@ -26,28 +26,44 @@ public class TeacherPairing : MonoBehaviour
                 if (teacher.traits[i] == pairedTeacher.traits[i]) thingsInCommon++;
             }
 
+            
+
+            if(thingsInCommon <= badScore)
+            {
+                print("Dålig matchning");
+
+                teacher.symbol.rend.sprite = teacher.symbol.badSymbol;
+                pairedTeacher.symbol.rend.sprite = teacher.symbol.badSymbol;
+
+                TimeCounter.Instance.NewBuff(-0.1f);
+
+            }
+            else if(thingsInCommon <= normalScore)
+            {
+                print("okej matchning");
+
+                teacher.symbol.rend.sprite = teacher.symbol.normalSymbol;
+                pairedTeacher.symbol.rend.sprite = teacher.symbol.normalSymbol;
+
+                TimeCounter.Instance.NewBuff(0.1f);
+            }
+            else
+            {
+                print("Mycket bra matchning");
+
+                teacher.symbol.rend.sprite = teacher.symbol.goodSymbol;
+                pairedTeacher.symbol.rend.sprite = teacher.symbol.goodSymbol;
+
+                TimeCounter.Instance.NewBuff(0.4f);
+            }
+
             teacher.DestroyTeacher();
             pairedTeacher.DestroyTeacher();
 
             pairedTeacher = null;
 
-            if(thingsInCommon <= badScore)
-            {
-                print("Dålig matchning");
-            }
-            else if(thingsInCommon <= normalScore)
-            {
-                print("okej matchning");
-            }
-            else
-            {
-                print("Mycket bra matchning");
-            }
-
-            
         }
    }
-
     
     
 }

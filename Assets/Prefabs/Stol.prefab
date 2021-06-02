@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7451116983844004885}
+  - component: {fileID: 287292872722665402}
   m_Layer: 0
   m_Name: Stol
   m_TagString: Untagged
@@ -31,6 +32,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &287292872722665402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 300741616129972638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa5ec70006193c7488277a37ad543ff7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cost: 15
 --- !u!1 &6194238139636840096
 GameObject:
   m_ObjectHideFlags: 0
