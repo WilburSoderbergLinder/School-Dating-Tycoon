@@ -5,7 +5,10 @@ using UnityEngine;
 [RequireComponent(typeof(TimeSystem))]
 public class TimeCounter : MonoBehaviour
 {
+    AudioSource pengar_SFx;
+    
     Loan[] loans = new Loan[5];
+    List<Buffs> buffs = new List<Buffs>();
 
     public float minutes = 0;
     public int hours = 0;
@@ -13,11 +16,12 @@ public class TimeCounter : MonoBehaviour
     public int weeks = 0;
     public int months = 0;
     public int years = 0;
+    public float totalBuff = 1;
 
     // Update is called once per frame
     void Update()
     {
-        minutes += Time.deltaTime * TimeSystem.Instance.timeScale; //Time.deltaTime kommer att multipliceras med en variabel som kommer från ett annat script, jag har inte tillgång till den än. - Daniel
+        minutes += Time.deltaTime * TimeSystem.Instance.timeScale;
 
         if (minutes >= 60) //Lägger till ett värde på "hours" om "minutes" är lika med eller större än 60. - Daniel
         {
@@ -54,7 +58,8 @@ public class TimeCounter : MonoBehaviour
 
     public void NewMonth()
     {
-        Saves.Instance.money += Saves.Instance.students * Saves.Instance.income;
+        CheckTotalBuff();
+        Saves.Instance.money += Mathf.FloorToInt(Saves.Instance.students * Saves.Instance.income * totalBuff);
         foreach (Loan item in loans)
         {
             item.PayMortgage();
@@ -68,11 +73,6 @@ public class TimeCounter : MonoBehaviour
 
     public void NewLoan(int loanSize, float interest, float mortgageRate)
     {
-
-        foreach (Loan i in loans)
-        {
-            
-        }
         for (int i = 0; i < loans.Length; i++)
         {
             if (loans[i] == null)
@@ -85,10 +85,24 @@ public class TimeCounter : MonoBehaviour
                 loans[i].mortgageRate = mortgageRate;
                 loans[i].SetLoan();
                 print("nytt Lån");
+                pengar_SFx.Play();
                 return;
             }
         }
         print("för många");
         //För många
+    }
+    public void NewBuff(float multiplier)
+    {
+        Buffs buff = gameObject.AddComponent<Buffs>();
+        buff.multiplier = multiplier;
+        buffs.Add(buff);
+    }
+    public void CheckTotalBuff()
+    {
+        foreach (Buffs b in buffs)
+        {
+            totalBuff += b.multiplier;
+        }
     }
 }
